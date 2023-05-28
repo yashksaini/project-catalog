@@ -1,5 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap");
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Assistant", sans-serif;
+}
+:root {
+  --primary: #ff5f6d;
+  --accent: #00c9a7;
+  --secondary: #ffc371;
+  --background: #f3f7f0;
+  --text: #333333;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--background);
+}
+#root {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+a {
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
+.activeLink {
+  position: relative;
+  color: var(--primary) !important;
+  font-weight: 600;
 }
