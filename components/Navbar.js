@@ -14,24 +14,24 @@ const Navbar = () => {
   return (
     <nav className={navStyle.navbar}>
       <div className={navStyle.logo}>
-        <span>Projects</span>&nbsp;
-        <span>Catalog</span>
+        <span className="material-symbols-outlined">donut_small</span>
+        <span>Projects</span>
       </div>
       <div className={openNav ? `${navStyle.activeNav}` : `${navStyle.navs}`}>
         <Link href="/" className={pathName === "/" ? "activeLink" : ""}>
-          Home
+          <span className="material-symbols-outlined">home</span> Home
         </Link>
         <Link
           href="/projects"
           className={pathName === "/projects" ? "activeLink" : ""}
         >
-          Projects
+          <span className="material-symbols-outlined">insights</span> Projects
         </Link>
         <Link
           href="/about"
           className={pathName === "/about" ? "activeLink" : ""}
         >
-          About Me
+          <span className="material-symbols-outlined">person_pin</span> About Me
         </Link>
       </div>
       <div className={navStyle.menu} onClick={toggleNav}>
