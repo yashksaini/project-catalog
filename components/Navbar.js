@@ -19,19 +19,27 @@ const Navbar = () => {
       </div>
       <div className={openNav ? `${navStyle.activeNav}` : `${navStyle.navs}`}>
         <Link href="/" className={pathName === "/" ? "activeLink" : ""}>
-          <span className="material-symbols-outlined">home</span> Home
+          {" "}
+          Home
         </Link>
         <Link
           href="/projects"
           className={pathName === "/projects" ? "activeLink" : ""}
         >
-          <span className="material-symbols-outlined">insights</span> Projects
+          {" "}
+          Projects
         </Link>
         <Link
           href="/about"
           className={pathName === "/about" ? "activeLink" : ""}
         >
-          <span className="material-symbols-outlined">person_pin</span> About Me
+          {" "}
+          About Me
+        </Link>
+      </div>
+      <div>
+        <Link href="https://yashksaini.netlify.app/" target="_blank">
+          <button className={navStyle.linkBtn}>Visit Portfolio</button>
         </Link>
       </div>
       <div className={navStyle.menu} onClick={toggleNav}>

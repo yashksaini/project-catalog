@@ -1,3 +1,5 @@
+import Image from "next/image";
+import style from "./home.module.css";
 export const metadata = {
   title: "Home | Projects Catalog | Yash Kumar Saini",
   description:
@@ -7,5 +9,17 @@ export const metadata = {
 };
 
 export default function Home() {
-  return <div>This is the home page</div>;
+  return (
+    <div className={style.container}>
+      <div className={style.imgBox}>
+        <img src="/illustrator.png" alt="Picture of illustration" />
+      </div>
+      <div className={style.contentBox}>
+        <h1>
+          Unlock the Power of Ideas: Explore a Portfolio of Projects that Push
+          the Boundaries.
+        </h1>
+      </div>
+    </div>
+  );
 }

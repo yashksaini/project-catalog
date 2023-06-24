@@ -2,6 +2,7 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[12].use[3]!./app/globals.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0";
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +13,7 @@
   --primary: #ff5f6d;
   --accent: #00c9a7;
   --secondary: #ffc371;
-  --background: #f3f7f0;
+  --background: #fff;
   --text: #333333;
 }
 
@@ -49,11 +50,6 @@ button:hover {
   height: 4rem;
   padding: 0 1rem;
   background-color: none;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10000;
 }
 .navbar_navbar__9q1fQ::after {
   content: "";
@@ -80,7 +76,15 @@ button:hover {
 .navbar_logo__LTPlN span:nth-child(2) {
   color: var(--text);
 }
-
+.navbar_linkBtn__99QAF {
+  width: 8rem;
+  height: 2.3rem;
+  border-radius: 4rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-weight: 300;
+}
 .navbar_navs__c7R6E,
 .navbar_activeNav___wt8s {
   display: flex;
