@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        {children}
+        <div style={{ marginTop: "80px" }}>{children}</div>
       </body>
     </html>
   );

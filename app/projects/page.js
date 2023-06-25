@@ -9,7 +9,7 @@ export const metadata = {
 const Projects = () => {
   return (
     <div>
-      <p>This contain all the </p>
+      <p>Projects Page </p>
     </div>
   );
 };

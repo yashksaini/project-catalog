@@ -9,17 +9,5 @@ export const metadata = {
 };
 
 export default function Home() {
-  return (
-    <div className={style.container}>
-      <div className={style.imgBox}>
-        <img src="/illustrator.png" alt="Picture of illustration" />
-      </div>
-      <div className={style.contentBox}>
-        <h1>
-          Unlock the Power of Ideas: Explore a Portfolio of Projects that Push
-          the Boundaries.
-        </h1>
-      </div>
-    </div>
-  );
+  return <div className={style.container}></div>;
 }

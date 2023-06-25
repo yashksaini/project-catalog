@@ -1,0 +1,217 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 16px;
+  background-color: var(--secondary);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navs,
+.activeNav {
+  display: flex;
+}
+.navLinks {
+  display: flex;
+  gap: 16px;
+}
+.navLinks a {
+  padding: 0 8px 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  color: var(--white);
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 1s 0s 1 forwards;
+}
+.navLinks a:nth-child(1) {
+  animation-delay: 0s;
+}
+.navLinks a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.navLinks a:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.navLinks a:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.navLinks a:hover {
+  color: var(--primary);
+}
+.verticalLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 80px;
+}
+.verticalLine span {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background-color: var(--primary);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 1s 0.8s 1 forwards;
+}
+.usefulLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.linkBtn {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.64px;
+  color: var(--secondary);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 1s 0s 1 forwards;
+}
+.githubBtn {
+  background-color: var(--background);
+  animation-delay: 1s;
+}
+.portfolioBtn {
+  background-color: var(--primary);
+  animation-delay: 1.2s;
+}
+.menu {
+  display: none;
+  width: 3rem;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+}
+.menu:hover {
+  cursor: pointer;
+}
+.transparentBox {
+  display: none;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .menu {
+    display: flex;
+  }
+  .navs {
+    display: none;
+  }
+  .navs,
+  .activeNav {
+    gap: 0;
+  }
+  .verticalLine {
+    display: none;
+  }
+  .activeNav {
+    display: unset;
+    overflow-y: auto;
+    height: calc(100dvh - 80px);
+    width: 250px;
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    background-color: var(--secondary);
+    z-index: 5;
+    animation: slideRightToLeft 0.5s 0s 1 forwards;
+  }
+  @keyframes slideRightToLeft {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0;
+    }
+  }
+  .transparentBox {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    width: calc(100% - 249px);
+    height: calc(100dvh - 80px);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: 5;
+    animation: slideLeftToRight 0.5s 0s 1 forwards;
+  }
+  @keyframes slideClose {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+  @keyframes slideLeftToRight {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  /* Scrollbar Styles */
+  .activeNav::-webkit-scrollbar {
+    width: 6px;
+  }
+  .activeNav::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+  .activeNav::-webkit-scrollbar-thumb {
+    background: var(--primary);
+  }
+  .activeNav .navLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 24px;
+    margin-top: 16px;
+  }
+  .activeNav .navLinks a {
+    height: 48px;
+    font-size: 22px;
+  }
+  .activeNav .usefulLinks {
+    flex-direction: column;
+    margin: 24px 0;
+    padding: 0 24px;
+  }
+  .activeNav .usefulLinks a {
+    width: 100%;
+  }
+  .activeNav .usefulLinks .linkBtn {
+    width: 100%;
+  }
+}
