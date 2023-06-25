@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        <div style={{ marginTop: "80px" }}>{children}</div>
+        <div style={{ paddingTop: "80px" }}>{children}</div>
       </body>
     </html>
   );
