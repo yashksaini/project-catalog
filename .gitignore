@@ -1,29 +1,35 @@
-# Ignore Next.js build output
-.next/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Ignore Node.js modules
-node_modules/
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# Ignore environment variables
-.env
+# testing
+/coverage
 
-# Ignore build artifacts
-out/
+# next.js
+/.next/
+/out/
 
-# Ignore development logs
-logs/
+# production
+/build
 
-# Ignore package lock files
-package-lock.json
-yarn.lock
-
-# Ignore IDE files
-.vscode/
-.idea/
-
-# Ignore OS generated files
+# misc
 .DS_Store
-Thumbs.db
+*.pem
 
-# Ignore testing artifacts
-coverage/
+# Ignore IDE and editor-specific files
+.vscode/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
