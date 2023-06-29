@@ -3,7 +3,7 @@ import styles from "./carousel.module.css";
 const Carousel = (props) => {
   const { images } = props;
   return (
-    <div className={styles.container}>
+    <>
       {images.map((image, index) => {
         return (
           <div className={styles.imgBox} key={index}>
@@ -16,7 +16,7 @@ const Carousel = (props) => {
         <div className={styles.transparentBox}></div>
         <img src={images[0]?.src} alt="Background" />
       </div>
-    </div>
+    </>
   );
 };
 

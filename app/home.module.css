@@ -1,0 +1,204 @@
+.container {
+  height: 640px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+.contentBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 24px 100px 24px;
+}
+.contentBox h1 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--background);
+}
+.smallHeading {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--background);
+  position: relative;
+}
+.smallHeading::before {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: var(--primary);
+  position: absolute;
+  left: -50px;
+  top: calc(50% - 2px);
+}
+.smallHeading::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: var(--primary);
+  position: absolute;
+  right: -50px;
+  top: calc(50% - 2px);
+}
+.searchBox {
+  background-color: var(--background);
+  padding: 16px;
+  width: 100%;
+  margin-top: 16px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.searchBox input {
+  height: 48px;
+  padding: 0 16px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid var(--white);
+}
+.searchBox input:focus {
+  outline: none;
+}
+.searchBox button {
+  border: none;
+  background-color: var(--primary);
+  width: 150px;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  color: var(--background);
+  font-size: 18px;
+  font-weight: 400;
+}
+.stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--background);
+  gap: 48px;
+}
+.eachStat {
+  width: 200px;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.eachStat span:first-child {
+  font-size: 36px;
+  font-weight: 600;
+}
+.eachStat span:last-child {
+  font-size: 16px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 768px) {
+  .contentBox h1 {
+    font-size: 32px;
+  }
+  .smallHeading {
+    font-size: 16px;
+  }
+  .smallHeading::before {
+    width: 20px;
+    height: 2px;
+    left: -30px;
+    top: calc(50% - 1px);
+  }
+  .smallHeading::after {
+    width: 20px;
+    height: 2px;
+    right: -30px;
+    top: calc(50% - 1px);
+  }
+  .searchBox {
+    padding: 12px;
+    border-radius: 12px;
+    gap: 8px;
+  }
+  .searchBox input {
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  .searchBox button {
+    width: 80px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  .stats {
+    gap: unset;
+    justify-content: space-around;
+    height: auto;
+    padding: 16px 0;
+  }
+  .eachStat {
+    width: 100px;
+  }
+  .eachStat span:first-child {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .eachStat span:last-child {
+    font-size: 12px;
+    font-weight: 200;
+  }
+}
+@media only screen and (max-width: 536px) {
+  /* Mobile Large*/
+  .container {
+    height: 480px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .content {
+    gap: 8px;
+    padding: 12px 12px 48px 12px;
+  }
+  .stats {
+    padding: 8px 0;
+    gap: unset;
+    justify-content: space-around;
+  }
+  .eachStat {
+    width: 70px;
+  }
+  .eachStat span:first-child {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .eachStat span:last-child {
+    font-size: 12px;
+    font-weight: 200;
+  }
+}
